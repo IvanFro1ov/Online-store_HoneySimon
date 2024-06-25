@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Honey.Api", "Honey.Api\Honey.Api.csproj", "{7582ACA2-15E7-4CD5-9BD5-053F711632E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{746DF6CC-D4C8-4943-91BD-5AB6A27D32CE}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Honey.BL", "Honey.BL\Honey.BL.csproj", "{6281A361-FDF6-4470-A42A-59F994F89101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Honey.Common", "Honey.Common\Honey.Common.csproj", "{141087D4-903A-41C7-90EA-25B55C94EB84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Honey.DB", "Honey.DB\Honey.DB.csproj", "{D9DE7BE6-E917-4A8A-B0DF-89257D84C863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Honey.Domain", "Honey.Domain\Honey.Domain.csproj", "{BF2A7BCC-AD94-4965-ADC8-D3BBDAF43AF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7582ACA2-15E7-4CD5-9BD5-053F711632E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7582ACA2-15E7-4CD5-9BD5-053F711632E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7582ACA2-15E7-4CD5-9BD5-053F711632E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7582ACA2-15E7-4CD5-9BD5-053F711632E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6281A361-FDF6-4470-A42A-59F994F89101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6281A361-FDF6-4470-A42A-59F994F89101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6281A361-FDF6-4470-A42A-59F994F89101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6281A361-FDF6-4470-A42A-59F994F89101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141087D4-903A-41C7-90EA-25B55C94EB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141087D4-903A-41C7-90EA-25B55C94EB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141087D4-903A-41C7-90EA-25B55C94EB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141087D4-903A-41C7-90EA-25B55C94EB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DE7BE6-E917-4A8A-B0DF-89257D84C863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DE7BE6-E917-4A8A-B0DF-89257D84C863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DE7BE6-E917-4A8A-B0DF-89257D84C863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DE7BE6-E917-4A8A-B0DF-89257D84C863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2A7BCC-AD94-4965-ADC8-D3BBDAF43AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2A7BCC-AD94-4965-ADC8-D3BBDAF43AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2A7BCC-AD94-4965-ADC8-D3BBDAF43AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2A7BCC-AD94-4965-ADC8-D3BBDAF43AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

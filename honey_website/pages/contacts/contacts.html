@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honey Simon</title>
+    <link type="image/png" rel="icon" href="../../img/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-nav">
+        <a href="../main/index.html">
+          <img
+            src="../../img/Logo.png"
+            width="190"
+            height="100"
+            alt="Логотип сайта"
+          />
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation-item">
+            <a href="../catalog/catalog.html">Каталог</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="../about_us/about.html">О компании</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="../contacts/contacts.html">Контакты</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="../payment-delivery/payment_delivery.html"
+              >Оплата и доставка</a
+            >
+          </li>
+          <li class="site-navigation-item">
+            <a href="#" id="profileLink">
+              <img
+                src="../../img/profile.png"
+                width="22"
+                height="22"
+                alt="Профиль"
+              />
+            </a>
+            <a href="#" id="profileTextLink">Профиль</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="../basket/basket.html">Корзина</a>
+            <a href="../basket/basket.html">
+              <img
+                src="../../img/корзина.png"
+                width="24"
+                height="24"
+                alt="Корзина"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-interface">
+          <a href="../basket/basket.html">
+            <img class="basket" src="../../img/корзина.png" alt="Корзина" />
+          </a>
+          <img class="menu" src="../../img/menu.svg" alt="Меню" />
+        </div>
+        <div class="mobile-navigation-panel">
+          <ul class="mobile-navigation">
+            <li><a href="../catalog/catalog.html">Каталог</a></li>
+            <li><a href="../about_us/about.html">О компании</a></li>
+            <li><a href="../contacts/contacts.html">Контакты</a></li>
+            <li>
+              <a href="../payment-delivery/payment_delivery.html"
+                >Оплата и доставка</a
+              >
+            </li>
+            <li><a href="#" id="mobileProfileLink">Профиль</a></li>
+          </ul>
+          <div class="close-button">✕</div>
+        </div>
+      </div>
+    </header>
+    <main class="hero">
+      <h1>Контакты</h1>
+      <h2>ООО “Honey Simon”</h2>
+      <p>Телефон: <a href="tel:+79507472700">+7(950) 747-27-00</a></p>
+      <p>
+        Эл.почта: <a href="mailto:honeysimon@mail.ru">honeysimon@mail.ru</a>
+      </p>
+      <div class="socialMedia">
+        <p>Мы в социальных сетях:</p>
+        <img
+          src="../../img/vk-com 2.svg"
+          width="48"
+          height="48"
+          alt="Логотип VK"
+        />
+        <img
+          src="../../img/telegram 2.svg"
+          width="48"
+          height="48"
+          alt="Логотип Telegram"
+        />
+      </div>
+      <p>
+        Адрес производства: Костромской район, Бакшеевское сельское поселение,
+        деревня Любовниково
+      </p>
+      <div id="map" class="map"></div>
+    </main>
+    <footer class="main-footer">
+      <nav class="footer-nav">
+        <img
+          src="../../img/Logo.png"
+          width="120"
+          height="65"
+          alt="Логотип сайта"
+        />
+        <ul class="footer-navigation">
+          <li class="footer-navigation-item">
+            <a href="../catalog/catalog.html">Каталог</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="../about_us/about.html">О компании</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="../contacts/contacts.html">Контакты</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="../payment-delivery/payment_delivery.html"
+              >Оплата и доставка</a
+            >
+          </li>
+        </ul>
+        <ul class="contact-info">
+          <li class="contact-info-item">
+            <a>
+              <img
+                src="../../img/phone.png"
+                width="24"
+                height="24"
+                alt="Телефон"
+              />
+            </a>
+            <a href="tel:+79507472700">+7(950) 747-27-00</a>
+          </li>
+          <li class="contact-info-item">
+            <img
+              src="../../img/mail.png"
+              width="24"
+              height="24"
+              alt="Телефон"
+            />
+            <a href="mailto:honeysimon@mail.ru">honeysimon@mail.ru</a>
+          </li>
+
+          <li class="contact-info-item">
+            <a href="#">
+              <img
+                src="../../img/telegram.png"
+                alt="Telegram"
+                width="32"
+                height="32"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="../../img/vkontakte.png"
+                alt="VK"
+                width="32"
+                height="32"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="script.js"></script>
+    <script src="../../scripts/curtain.js"></script>
+    <script src="../../scripts/checkAuthAndRedirect.js"></script>
+  </body>
+</html>

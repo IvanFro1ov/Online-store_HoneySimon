@@ -1,0 +1,29 @@
+﻿services:
+  honey:
+    #image: honey.api
+    build:
+      context: .
+      target: final
+      dockerfile: Honey.Api/Dockerfile
+    ports:
+      - "5227:80"
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres
+    restart: always
+    user: postgres
+    environment:
+      POSTGRES_DB: "honey-db"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "admin"
+    ports:
+      - "6433:5432"
+    expose:
+      - 5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5

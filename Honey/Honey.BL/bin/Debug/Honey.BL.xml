@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Honey.BL</name>
+    </assembly>
+    <members>
+        <member name="T:Honey.BL.Authentication.Hashing.IPasswordHasher">
+            <summary>
+            Интерфейс для взаимодействия с паролями
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Authentication.Hashing.IPasswordHasher.HashPassword(System.String)">
+            <summary>
+            Захешировать пароль
+            </summary>
+            <param name="password">Пароль пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Authentication.Hashing.IPasswordHasher.PasswordMatches(System.String,System.String)">
+            <summary>
+            Сравнить пароль
+            </summary>
+            <param name="providedPassword">Пароль для сравнения</param>
+            <param name="passwordHash">Захешированный пароль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Honey.BL.Services.OrderService">
+            <summary>
+            Сервис заказов
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.#ctor(Honey.DB.Repository.Order.IOrderRepository,Honey.DB.Repository.ShopCart.IShopCartRepository,AutoMapper.IMapper)">
+            <summary>
+            Конструктор он и в африке конструктор
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.CreateOrder(System.Guid)">
+            <summary>
+            Создание заказа
+            </summary>
+            <param name="userId">Идентификатор пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.CancelOrder(System.Guid,System.Guid)">
+            <summary>
+            Отменить заказ
+            </summary>
+            <param name="orderId">Идентификатор заказа</param>
+            <param name="userId">Идентификатор пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.GetPageUserOrders(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Получить историю заказов пользователя
+            </summary>
+            <param name="userId">Идентифкиатор пользователя</param>
+            <param name="skip">Кол-во пропущенных элементов</param>
+            <param name="take">Кол-во элементов в странице</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.GetOrderInfo(System.Guid)">
+            <summary>
+            Получение информации по определенному заказу
+            </summary>
+            <param name="orderId">Идентифкиатор заказа</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.OrderService.UpdateOrderStatus(System.Guid,Honey.Common.Enums.Statuses)">
+            <summary>
+            Обновить статус заказа
+            </summary>
+            <param name="orderId">Идентификатор заказа</param>
+            <param name="status">Статус заказа</param>
+            <returns></returns>
+        </member>
+        <member name="T:Honey.BL.Services.ProductService">
+            <summary>
+            Сервис для взаимодействия с товарами
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.#ctor(Honey.DB.Repository.Product.IProductRepository,AutoMapper.IMapper)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="productRepository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.CreateProduct(Honey.Domain.Dto.Product.ProductRequestDto)">
+            <summary>
+            Создать новый товар
+            </summary>
+            <param name="request">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.GetProduct(System.Guid)">
+            <summary>
+            Получение информации о товаре
+            </summary>
+            <param name="id">Идентификатор типа продукта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.UpdateProduct(System.Guid,Honey.Domain.Dto.Product.ProductRequestDto)">
+            <summary>
+            Обновление товара
+            </summary>
+            <param name="id">Идентификатор обновляемой сущности</param>
+            <param name="requestDto">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.GetPageProductType(System.Int32,System.Int32)">
+            <summary>
+            Получение страницы товаров
+            </summary>
+            <param name="skip">Сколько пропустить</param>
+            <param name="take">Сколько взять в странице</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductService.DeleteProduct(System.Guid)">
+            <summary>
+            Удаление товара
+            </summary>
+            <param name="id">Идентификатор товара</param>
+        </member>
+        <member name="T:Honey.BL.Services.ProductTypeService">
+            <summary>
+            Сервис для вхаимодействия с типами товаров
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.#ctor(Honey.DB.Repository.ProductType.IProductTypeRepository,AutoMapper.IMapper)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="productTypeRepository"></param>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.CreateProductType(Honey.Domain.Dto.ProductType.ProductTypeRequestDto)">
+            <summary>
+            Создать новый тип продукта
+            </summary>
+            <param name="request">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.UpdateProductType(System.Guid,Honey.Domain.Dto.ProductType.ProductTypeRequestDto)">
+            <summary>
+            Обновление типа продукта
+            </summary>
+            <param name="id">Идентификатор обновляемой сущности</param>
+            <param name="requestDto">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.GetProductType(System.Guid)">
+            <summary>
+            Получение типа продукта
+            </summary>
+            <param name="id">Идентификатор типа продукта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.GetPageProductType(System.Int32,System.Int32)">
+            <summary>
+            Получение страницы типов продуктов
+            </summary>
+            <param name="skip">Сколько пропустить</param>
+            <param name="take">Сколько элементов взять в странице</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.BL.Services.ProductTypeService.DeleteProductType(System.Guid)">
+            <summary>
+            Удаление типа продукта
+            </summary>
+            <param name="id">Идетификатор типа продукта</param>
+        </member>
+        <member name="T:Honey.BL.Services.ShopCartService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Honey.BL.Services.ShopCartService.#ctor(Honey.DB.Repository.ShopCart.IShopCartRepository,AutoMapper.IMapper,Honey.DB.Repository.Product.IProductRepository)">
+            <summary>
+            
+            </summary>
+            <param name="shopCartRepository"></param>
+        </member>
+    </members>
+</doc>

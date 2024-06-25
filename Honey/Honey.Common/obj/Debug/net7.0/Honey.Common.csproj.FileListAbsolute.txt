@@ -1,0 +1,12 @@
+F:\Ivan\Диплом\Honey\Honey.Common\bin\Debug\net7.0\Honey.Common.deps.json
+F:\Ivan\Диплом\Honey\Honey.Common\bin\Debug\net7.0\Honey.Common.dll
+F:\Ivan\Диплом\Honey\Honey.Common\bin\Debug\net7.0\Honey.Common.pdb
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.AssemblyInfoInputs.cache
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.AssemblyInfo.cs
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.csproj.CoreCompileInputs.cache
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.sourcelink.json
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.dll
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\refint\Honey.Common.dll
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\Honey.Common.pdb
+F:\Ivan\Диплом\Honey\Honey.Common\obj\Debug\net7.0\ref\Honey.Common.dll

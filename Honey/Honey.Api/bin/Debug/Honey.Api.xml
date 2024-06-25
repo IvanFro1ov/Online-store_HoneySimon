@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Honey.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Honey.Controllers.AuthController">
+            <summary>
+            Контроллер аутентификации
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.AuthController.Register(Honey.Domain.Dto.Authentication.Register.UserRegisterRequestDto)">
+            <summary>
+            Регистрация пользователя
+            </summary>
+            <param name="user"></param>
+            <response code="200">Return user Id and token</response>
+            <response code="400">If the user already exists or Email is not valid</response>
+        </member>
+        <member name="M:Honey.Controllers.AuthController.Login(Honey.Domain.Dto.Authentication.Login.UserLoginRequestDto)">
+            <summary>
+            Логин
+            </summary>
+            <param name="user"></param>
+            <response code="200">Return user Id and token</response>
+            <response code="404">If the user doesn't exist</response>
+            <response code="400">If the password is not right</response>
+        </member>
+        <member name="M:Honey.Controllers.AuthController.ForgotPassword(Honey.Domain.Dto.Authentication.RestoringPassword.ForgotPassword.ForgotPasswordRequestDto)">
+            <summary>
+            Забыть пароль
+            </summary>
+            <param name="email"></param>
+            <response code="200">Return Email</response>
+            <response code="404">If the user with Email doesn't exist</response>
+            <response code="400">If Email is not valid</response>
+        </member>
+        <member name="M:Honey.Controllers.AuthController.RestorePassword(Honey.Domain.Dto.Authentication.RestoringPassword.RestorePassword.RestorePasswordRequestDto)">
+            <summary>
+            Восстановить пароль
+            </summary>
+            <param name="data"></param>
+            <response code="200">Return Email</response>
+            <response code="404">If the user with Email doesn't exist</response>
+            <response code="400">If new password and confirm password are different or code is not valid</response>
+        </member>
+        <member name="T:Honey.Controllers.OrdersController">
+            <summary>
+            Контроллер для взаимодействия с заказом
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.OrdersController.#ctor(Honey.Domain.Interfaces.IOrderService)">
+            <summary>
+            Контроллер
+            </summary>
+            <param name="orderService"></param>
+        </member>
+        <member name="M:Honey.Controllers.OrdersController.CreateOrder">
+            <summary>
+            Создать заказ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.OrdersController.CancelOrder(System.Guid)">
+            <summary>
+            Отменить заказ 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.OrdersController.GetOrderInfo(System.Guid)">
+            <summary>
+            Получить информацию о заказе
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.OrdersController.GetOrderList(System.Int32,System.Int32)">
+            <summary>
+            Получить страницу заказов
+            </summary>
+            <param name="skip"></param>
+            <param name="take"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Honey.Controllers.ProductController">
+            <summary>
+            Контроллер для взаимодействия с товарами
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.#ctor(Honey.Domain.Interfaces.IProductService,Honey.Domain.Interfaces.IUserService)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="productService"></param>
+            <param name="userService"></param>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.AddProduct(Honey.Domain.Dto.Product.ProductRequestDto)">
+            <summary>
+            Добавить новый товар
+            </summary>
+            <param name="requestDto">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.GetIcon(System.Guid)">
+            <summary>
+            Получение иконки
+            </summary>
+            <param name="productId">Идентификатор файла</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.GetProductInfo(System.Guid)">
+            <summary>
+            Получение информации о товаре
+            </summary>
+            <param name="id">идентификатор продукта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.UpdateProduct(System.Guid,Honey.Domain.Dto.Product.ProductRequestDto)">
+            <summary>
+            Обновление информации о товаре
+            </summary>
+            <param name="id">идентификатор товара</param>
+            <param name="requestDto">Модель запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.GetList(System.Int32,System.Int32)">
+            <summary>
+            Получение страницы товаров
+            </summary>
+            <param name="skip">Кол-во пропущенных элементов</param>
+            <param name="take">Кол-во элементов в странице</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductController.DeleteProduct(System.Guid)">
+            <summary>
+            Удаление товара
+            </summary>
+            <param name="id">Идентификатор товара</param>
+            <returns></returns>
+        </member>
+        <member name="T:Honey.Controllers.ProductTypeController">
+            <summary>
+            Контроллер для типов продуктов
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.#ctor(Honey.Domain.Interfaces.IProductTypeService)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="productTypeService"></param>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.AddProductType(Honey.Domain.Dto.ProductType.ProductTypeRequestDto)">
+            <summary>
+            Добавить новый тип продуктов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.UpdateProductType(System.Guid,Honey.Domain.Dto.ProductType.ProductTypeRequestDto)">
+            <summary>
+            Обновить существующий тип продуктов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.GetProductType(System.Guid)">
+            <summary>
+            Получить тип продукта по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.GetProductTypeList(System.Int32,System.Int32)">
+            <summary>
+            Получить страницу продуктов
+            </summary>
+            <param name="skip">Сколько пропустить</param>
+            <param name="take">Сколько взять</param>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ProductTypeController.DeleteProductType(System.Guid)">
+            <summary>
+            Удаление типа продукта
+            </summary>
+            <param name="id">Идентификатор типа продукта</param>
+            <returns></returns>
+        </member>
+        <member name="T:Honey.Controllers.ShopCartController">
+            <summary>
+            Контроллер
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.ShopCartController.#ctor(Honey.Domain.Interfaces.IUserService,Honey.Domain.Interfaces.IShopCartService)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:Honey.Controllers.ShopCartController.GetUserShopCart">
+            <summary>
+            Получить корзину пользователя
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.ShopCartController.AddProductToshopCart(System.Guid)">
+            <summary>
+            Добавить товар в корзину
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Honey.Controllers.ShopCartController.RemoveProductInShopCart(System.Guid)">
+            <summary>
+            Удаление продукта из корзины
+            </summary>
+        </member>
+        <member name="T:Honey.Controllers.UserController">
+            <summary>
+            Контроллер для взаимодействия с пользователем
+            </summary>
+        </member>
+        <member name="M:Honey.Controllers.UserController.#ctor(Honey.Domain.Interfaces.IUserService)">
+            <summary>
+            Коструктор
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:Honey.Controllers.UserController.Edit(Honey.Domain.Dto.User.Update.UserUpdateRequestDto)">
+            <summary>
+            Редактировать информацию о пользователе
+            </summary>
+            <param name="user"></param>
+            <response code="200">Return user Id and token</response>
+            <response code="400">If new UserName is already exists or age is not valid</response>
+            <response code="404">If user with UserName doesn't exist</response>
+        </member>
+        <member name="M:Honey.Controllers.UserController.GetById(System.Guid)">
+            <summary>
+            Получить пользователя по ID
+            </summary>
+            <param name="id"></param>
+            <response code="200">Return user</response>
+            <response code="404">If user with Id doesn't exist</response>
+        </member>
+        <member name="M:Honey.Controllers.UserController.GetByUserName(System.String)">
+            <summary>
+            Найти пользователя по никнейму
+            </summary>
+            <param name="name"></param>
+            <response code="200">Return user</response>
+            <response code="404">If user with UserName doesn't exist</response>
+        </member>
+        <member name="M:Honey.Controllers.UserController.Delete(System.Guid)">
+            <summary>
+            Удалить пользователя
+            </summary>
+            <param name="id"></param>
+            <response code="200">Return user</response>
+            <response code="404">If user doesn't exist</response>
+        </member>
+        <member name="T:Honey.Extension.ServiceCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Honey.Extension.ServiceCollectionExtensions.ConfigureAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Honey.Extension.ServiceCollectionExtensions.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>
